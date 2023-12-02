@@ -6,8 +6,6 @@ from calendar import IllegalMonthError
 import random
 import re
 
-N=10
-
 @dataclass
 class AvailableAPIs:
     """Keeps track of available APIs"""
@@ -50,10 +48,9 @@ def check_apis_available(
     tried_rand = False
     if(len(tokenized_data) < 128):
         n=len(tokenized_data)
-        print(n)
     for i in range(len(tokenized_data) // n):
         text = tokenizer.decode(tokenized_data[i * n : (i + 1) * n])
-        print("text: ", text)
+        #print("text: ", text)
 
         operators = bool(re.search(calc_pattern, text))
         equals = any(

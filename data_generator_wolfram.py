@@ -34,7 +34,7 @@ if __name__ == "__main__":
         "Writer/palmyra-small",
         low_cpu_mem_usage=True,
     ).cuda()
-    dataset = load_dataset("ChilleD/SVAMP", split="train", streaming=True)
+    dataset = load_dataset("math_dataset", "arithmetic__add_sub_multiple", split="train", streaming=True)
     iter_data = iter(dataset)
     test = False
     counter = 0
@@ -52,7 +52,8 @@ if __name__ == "__main__":
                 num_examples -= len(item['Wolframe_output'])
     while found_examples < num_examples:
         data = next(iter_data)
-        data["text"]=data["Body"]+ " " +data["Question"]
+        #print(data)
+        data["text"]=data["question"]+ " " +data["answer"]
         if file_counter < start_count:
             file_counter += 1
             continue
@@ -62,6 +63,7 @@ if __name__ == "__main__":
         available = check_apis_available(data, gpt_tokenizer)
         test = available.wolframe
         if test:
+            #print("in test")
             data_outputs = api_handler.parse_article(data, model, gpt_tokenizer)
             output_dataset.append(
                 {
@@ -78,7 +80,7 @@ if __name__ == "__main__":
             eta_m = eta_m - (eta_h*60)
             eta_s = eta_s - ((eta_m*60) + (eta_h*60*60))
             print(f"Found: {found_examples}/{num_examples}, ETA: {eta_h}H:{eta_m}M:{eta_s}s")
-            if found_examples//1 > prev_found//1:
+            if found_examples//10 > prev_found//10:
                 with open(f"wolfram_data_{args.device_id}.json", 'w') as f:
                     json.dump(output_dataset, f, indent=2)
             counter += 1

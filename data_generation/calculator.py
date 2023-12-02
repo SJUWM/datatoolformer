@@ -44,20 +44,21 @@ class CalculatorPostprocessing(APICallPostprocessing):
         generated_texts = list()
         max_token_len = N
         max_token_len_base = N
-        print("\n**in add api_calls**")
-        #print("Texts to test: ", texts_to_test)
-        # print("Outputs dict: ")
+        # print("\n**in add api_calls**")
+        # print("Texts to test: ", texts_to_test)
+        # print("generated_text: ", outputs[0]["generated_text"])
         # print(outputs)
         # print("*****")
         for j in range(len(outputs)):
             outputs[j]["Calculator"] = outputs[j]["generated_text"].replace(
                 texts_to_test[candidate], ""
             )
-            print("afte adding cacluclator key")
-            #print("Outputs dict: ")
-            print(outputs[j]["Calculator"])
-            print("*****")
+            # print("afte adding cacluclator key")
+            # #print("Outputs dict: ")
+            # print(outputs[j]["Calculator"])
+            # print("*****")
             outputs[j]["Generated"] = outputs[j]["generated_text"].split("Output:")[-1]
+            #print("Generated: ", outputs[j]["Generated"] )
             if "]" in outputs[j]["Calculator"]:
                 outputs[j]["Calculator"] = (
                     outputs[j]["Calculator"].replace("Calculator(", "").split("]")[0]
@@ -71,6 +72,7 @@ class CalculatorPostprocessing(APICallPostprocessing):
                     outputs[j]["Calculator_text"] + "]" + "\n",
                     return_tensors="pt",
                 )["input_ids"].cuda()
+                #print("After split Calculator: ", (outputs[j]["Calculator"]))
                 try:
                     outputs[j]["Calculator"] = self.calculator(outputs[j]["Calculator"])
                 except (ValueError, TypeError, ZeroDivisionError):
@@ -78,8 +80,8 @@ class CalculatorPostprocessing(APICallPostprocessing):
                 if outputs[j]["Calculator"] is None:
                     continue
                 outputs[j]["Calculator_output"] = [outputs[j]["Calculator_text"][1:], str(outputs[j]["Calculator"])]
-                print("Calculator_output")
-                print(outputs[j]["Calculator_output"])
+                # print("Calculator_output")
+                # print(outputs[j]["Calculator_output"])
                 outputs[j]["Calculator_text"] = (
                     outputs[j]["Calculator_text"]
                     + "->"
@@ -90,7 +92,7 @@ class CalculatorPostprocessing(APICallPostprocessing):
                     outputs[j]["Calculator_text"] + "\n",
                     return_tensors="pt",
                 )["input_ids"].cuda()
-                print("Calculator_text after all modifications:",  outputs[j]["Calculator_text"])
+                #print("Calculator_text after all modifications:",  outputs[j]["Calculator_text"])
                 test_inputs = torch.concat(
                     [
                         test_inputs.cuda(),
@@ -123,14 +125,14 @@ class CalculatorPostprocessing(APICallPostprocessing):
     def parse_article(
         self, data: dict, model: PreTrainedModel, tokenizer: PreTrainedTokenizerBase
     ):
-        print("***In Parse Article***")
+        #print("***In Parse Article***")
         outputs = list()
         tokens = tokenizer(data["text"], return_tensors="pt")["input_ids"]
         global N
         N= tokens.shape[1] - 1
         global M
-        if N < M:
-            M = N-2
+        # if N < M:
+        M = N-2
         for i in range((tokens.shape[1]-1)//N):
             if (N * (i + 1)) > tokens.shape[1]:
                 continue
@@ -140,7 +142,7 @@ class CalculatorPostprocessing(APICallPostprocessing):
                 int(tokens.shape[1] + (-N * (i + 1))) : int(tokens.shape[1] + (-N * i)),
             ]
             string = tokenizer.decode(input_tokens[0])
-            print("Decoded string from tokenizer: ", string)
+            #print("Decoded string from tokenizer: ", string)
             model_input = tokenizer(
                 calculator_prompt.replace("<REPLACEGPT>", string)+string,
                 return_tensors="pt",

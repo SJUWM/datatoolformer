@@ -38,7 +38,8 @@ if __name__ == "__main__":
         # torch_dtype=torch.float16,
         low_cpu_mem_usage=True,
     ).cuda()
-    dataset = load_dataset("ChilleD/SVAMP", split="train", streaming=True)
+    #dataset = load_dataset("ChilleD/SVAMP", split="train", streaming=True)
+    dataset = load_dataset("math_dataset", "arithmetic__add_sub_multiple", split="train", streaming=True)
     iter_data = iter(dataset)
     test = False
     counter = 0
@@ -56,7 +57,8 @@ if __name__ == "__main__":
                 num_examples -= len(item['calculator_outputs'])
     while found_examples < num_examples:
         data = next(iter_data)
-        data["text"]=data["Body"]+ " " +data["Question"]
+        #data["text"]=data["Body"]+ " " +data["Question"]
+        data["text"]=data["question"]+ " " +data["answer"]
         #print("data: ", data)
         if file_counter < start_count:
             file_counter += 1
@@ -91,7 +93,7 @@ if __name__ == "__main__":
             eta_m = eta_m - (eta_h*60)
             eta_s = eta_s - ((eta_m*60) + (eta_h*60*60))
             print(f"device {args.device_id} Found: {found_examples}/{num_examples}, ETA: {eta_h}H:{eta_m}M:{eta_s}s")
-            if found_examples//10 > prev_found//10:
+            if found_examples//1 > prev_found//1:
                 with open(f"calc_data_{args.device_id}.json", 'w') as f:
                     json.dump(output_dataset, f, indent=2)
             counter += 1

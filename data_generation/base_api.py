@@ -68,7 +68,7 @@ class APICallPostprocessing:
             dim=0,
         )
         max_start_tokens = max_start_tokens * remove_tokens
-        return torch.topk(max_start_tokens[:, : -(M1 + 1)], k=self.k_values, dim=1)
+        return torch.topk(max_start_tokens[:, : -(M1+1)], k=self.k_values, dim=1)
 
     def create_candidates(
         self,
@@ -101,7 +101,7 @@ class APICallPostprocessing:
         num_to_keeps = list()
         texts_to_test = list()
         max_index = 0
-        print("\n**In create candidate***")
+        #print("\n**In create candidate***")
         #print("shape of indices: ", input_tokens.shape)
         for i, batch in enumerate(indices):
             for j, index in enumerate(batch):
@@ -196,7 +196,7 @@ class APICallPostprocessing:
         :param kwargs: kwargs to pass to add_api_calls
         :return: individual candidate outputs
         """
-        print("\n***In Generate continuations***")
+        #print("\n***In Generate continuations***")
         global N1 
         N1= N
         global M1

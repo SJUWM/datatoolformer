@@ -1,4 +1,5 @@
 import os
+import re
 import copy
 import requests
 import calendar
@@ -185,23 +186,27 @@ output - A float, the result of the calculation
 Adapted from: https://levelup.gitconnected.com/3-ways-to-write-a-calculator-in-python-61642f2e4a9a 
 """
 
+def matchParanth(input_q):
+    count=0
+    for q in input_q:
+        if q == "(":
+            count+=1
+    input_q += ")"*count
+    return input_q
 
 def Calculator(input_query: str):
-    #TODO: Check logic if it works
-    # currently only if 1 term return a score above 0
-    print("Input Query: ", input_query)
-    operators = {"+": add, "-": sub, "*": mul, "/": truediv}
-    if input_query.isdigit():
-        return float(input_query)
-    new_input = ""
-    for c in operators.keys():
-        left, operator, right = input_query.partition(c)
-        new_input += left+operator+right
-    # print("evaluate: ", eval(new_input))
-    # return eval(new_input)
+    input_query=re.sub('[a-zA-Z\'%?!@<>$#&:;]','',input_query)
+    input_query=matchParanth(input_query)
+    #print("evaluate: ", eval(input_query))
+    return eval(input_query)
+    # operators = {"+": add, "-": sub, "*": mul, "/": truediv}
+    # if input_query.isdigit():
+    #     return float(input_query)
+    # for c in operators.keys():
+    #     left, operator, right = input_query.partition(c)
 
-        if operator in operators:
-            return round(operators[operator](Calculator(left), Calculator(right)), 2)
+    #     if operator in operators:
+    #         return round(operators[operator](Calculator(left), Calculator(right)), 2)
 
 
 # Other Optional Tools
@@ -281,7 +286,7 @@ def WolframAlphaCalculator(input_query: str):
     try:
         res = client.query(input=input_query)
         ans = next(res.results).text
-    except (StopIteration):
+    except StopIteration:
         ans = ""
     print("Answer: ", ans)
     return ans

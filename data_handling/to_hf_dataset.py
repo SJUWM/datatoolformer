@@ -5,9 +5,9 @@ import tqdm
 
 
 if __name__ == '__main__':
-    with open("../combined_data.json") as f:
+    with open("combined_data.json") as f:
         data = json.load(f)
-    tokenizer = AutoTokenizer.from_pretrained("bigscience/bloom-560m")
+    tokenizer = AutoTokenizer.from_pretrained("Writer/palmyra-small")
     hf_training_data = {"text": []}
     for key in tqdm.tqdm(list(data.keys())):
         sorted_keys = sorted(data[key]["outputs"], key=lambda x:x[0])

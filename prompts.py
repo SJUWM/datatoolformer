@@ -13,7 +13,7 @@ Input: I went to Paris in 1994 and stayed there until 2011, so in total, it was 
 Output: I went to Paris in 1994 and stayed there until 2011, so in total, it was [Calculator(2011 - 1994)] 17 years.
 Input: From this, we have 4 * 30 minutes = 120 minutes.
 Output: From this, we have 4 * 30 minutes = [Calculator(4 * 30)] 120 minutes.
-Input: x
+Input: <REPLACEGPT>
 Output:
 """
 
@@ -58,7 +58,7 @@ Input: But what are the risks during production of nanomaterials? Some nanomater
 Output: But what are the risks during production of nanomaterials? [WikiSearch("nanomaterial production risks")] Some nanomaterials may give rise to various kinds of lung damage.
 Input: Metformin is the first-line drug for patients with type 2 diabetes and obesity.
 Output: Metformin is the first-line drug for [WikiSearch("Metformin first-line drug")] patients with type 2 diabetes and obesity.
-Input: x
+Input: <REPLACEGPT>
 Output:
 """
 
@@ -72,7 +72,7 @@ Input: In Morris de Jonge’s Jeschuah, der klassische jüdische Mann, there is 
 Output: In Morris de Jonge’s Jeschuah, der klassische jüdische Mann [MT(der klassische jüdische Mann)], there is a description of a Jewish writer
 Input: 南 京 高 淳 县 住 房 和 城 乡 建 设 局 城 市 新 区 设 计 a plane of reference Gaochun is one of seven districts of the provincial capital Nanjing
 Output: [MT(南京高淳县住房和城乡建设局 城市新 区 设 计)] a plane of reference Gaochun is one of seven districts of the provincial capital Nanjing
-Input: x
+Input: <REPLACEGPT>
 Output:
 """
 
@@ -89,7 +89,24 @@ Input: The current day of the week is Wednesday.
 Output: The current day of the week is [Calendar()] Wednesday.
 Input: The store is never open on the weekend, so today it is closed.
 Output: The store is never open on the weekend, so today [Calendar()] it is closed.
-Input: x
+Input: <REPLACEGPT>
+Output:
+"""
+
+wolframe_prompt = """
+Your task is to add calls to a Scientific API to a piece of text that related to chemistry, math, physics. The questions should help you get information required to complete the text.
+You can call the API by writing "[Wolframe(question)]" where "question" is the question you want to ask. Here are some examples of API calls:
+
+Input: The complex conjugate of 2 + 3i is 2 - 3i.
+Output: The complex conjugate of 2 + 3i is [Wolframe("What is the complex conjugate of 2 - 3i")] 2 - 3i.
+
+Input: Solve x^2 + 4x + 6 = 0. The answer is x = -2 - i sqrt(2)
+Output: Solve x^2 + 4x + 6 = 0. The answer is [Wolframe("Solve x^2 + 4x + 6 = 0")] x = -2 - i sqrt(2)
+
+Input: Given a sequence of numbers: 21.3, 38.4, 12.7, 41.6. The mean is 28.5
+Output: Given a sequence of numbers: 21.3, 38.4, 12.7, 41.6. The mean is [Wolframe("What is the mean of 21.3, 38.4, 12.7, 41.6")] 28.5
+
+Input: <REPLACEGPT>
 Output:
 """
 # Input: The number of days from now until Christmas is 30.

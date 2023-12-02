@@ -1,0 +1,904 @@
+[
+  {
+    "file_index": 0,
+    "text": "There are 87 oranges and 290 bananas in Philip's collection. If the bananas are organized into 2 groups and oranges are organized into 93 groups How big is each group of bananas?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 8,
+    "text": "At the arcade Dave had won some tickets. He used 12 tickets to buy some toys. If he still has 14 tickets left How many tickets did Dave win at the arcade?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 16,
+    "text": "Each basket of peaches has 19 red peaches and 4 green peaches. If there are 15 such baskets How many peaches are in the baskets altogether?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 24,
+    "text": "During summer break 610769 kids from Lawrence county go to camp and the other 590796 kids stay home. An additional 22 kids from outside the county attended the camp. About how many kids are in Lawrence county?",
+    "Wolframe_output": [
+      [
+        2.6721134185791016,
+        3,
+        "Wolframe(\"What is the mean of 610769 kids from Lawrence county\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 32,
+    "text": "A mailman gives 2 junk mails to each house in a block. If the mailman has to give 14 pieces of junk mail to each block. How many houses are there in a block?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 40,
+    "text": "5 red peaches, 14 yellow peaches and 6 green peaches are in the basket. How many green and yellow peaches are in the basket?",
+    "Wolframe_output": [
+      [
+        3.2099552154541016,
+        1,
+        "Wolframe(\"What is the mean of 5 red peaches, 14 yellow peaches and 6 green peaches are in the basket\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 48,
+    "text": "Every day Ryan spends 6 hours on learning english and 7 hours on learning chinese. If he learns for 5 days How many hours does he spend on learning english and chinese in all?",
+    "Wolframe_output": [
+      [
+        0.30022287368774414,
+        2,
+        "Wolframe(day)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 56,
+    "text": "Jerry had 4 action figures and 22 books on a shelf in his room. Later he added 6 more action figures to the shelf. How many action figures were on his shelf in all?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 64,
+    "text": "Rachel picked 7 ripe apples from her tree. Now the tree has 5 apples still on it. If 3 of those are ripe and the rest are unripe How many unripe apples does the tree have now?",
+    "Wolframe_output": [
+      [
+        1.4755265712738037,
+        2,
+        "Wolframe(7 ripe apples)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 72,
+    "text": "Paul had 51 books and 106 pens. After selling some books and pens in a garage sale he had 82 books and 14 pens left. How many pens did he sell in the garage sale?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 80,
+    "text": "Rachel had to complete 2 pages of math homework, 3 pages of reading homework and 10 more pages of biology homework. How many pages did she have to complete in all?",
+    "Wolframe_output": [
+      [
+        0.6343181133270264,
+        4,
+        "Wolframe(\"What is the mean of Rachel's homework\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 88,
+    "text": "Josh had some marbles in his collection. He lost 21 marbles. If he has 12 marbles now How many marbles did he have in his collection?",
+    "Wolframe_output": [
+      [
+        0.3934447765350342,
+        11,
+        "Wolframe(lost)",
+        "1 | adjective | no longer in your possession or control; unable to be found or recovered\n2 | adjective | having lost your bearings; confused as to time or place or personal identity\n3 | adjective | spiritually or physically doomed or destroyed\n4 | adjective | not gained or won\n5 | adjective | incapable of being recovered or regained\n6 | adjective | not caught with the senses or the mind\n7 | adjective | deeply absorbed in thought\n8 | adjective | perplexed by many conflicting situations or statements; filled with bewilderment\n(10 meanings)"
+      ]
+    ]
+  },
+  {
+    "file_index": 96,
+    "text": "Marco and his dad went strawberry picking. Together their strawberries weighed 35 pounds. Marco's strawberries weighed 13 pounds. How much more did his dad's strawberries weigh than his?",
+    "Wolframe_output": [
+      [
+        0.5998435020446777,
+        12,
+        "Wolframe(weighted)",
+        "1 | adjective | made heavy or weighted down with weariness\n2 | adjective | adjusted to reflect value or proportion"
+      ]
+    ]
+  },
+  {
+    "file_index": 104,
+    "text": "Every day Ryan spends 4 hours on learning english and 6 hours on learning chinese. If he learns for 86 days How many hours does he spend on learning english and chinese each day?",
+    "Wolframe_output": [
+      [
+        0.30245256423950195,
+        2,
+        "Wolframe(day)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 112,
+    "text": "Rachel had to complete 8 pages of math homework. If she had to complete 6 more pages of reading homework than math homework How many pages of reading homework did she have to complete?",
+    "Wolframe_output": [
+      [
+        0.6185986995697021,
+        4,
+        "Wolframe(\"What is the mean of Rachel's math homework\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 120,
+    "text": "4 birds and 3 storks were sitting on the fence. 6 more storks came to join them. How many more storks than birds are sitting on the fence?",
+    "Wolframe_output": [
+      [
+        1.9434456825256348,
+        1,
+        "Wolframe(\"What is the mean of 4 birds and 3 storks\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 128,
+    "text": "There were some roses in the vase. Jessica cut 16 more roses from her flower garden and put them in the vase. There are now 23 roses in the vase. How many roses were there in the vase at the beginning?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 136,
+    "text": "Frank had 42 pieces of candy. If he put them equally into 2 bags How many pieces of candy are in each bag?",
+    "Wolframe_output": [
+      [
+        0.633519172668457,
+        2,
+        "Wolframe(42)",
+        "42 is an even number."
+      ]
+    ]
+  },
+  {
+    "file_index": 144,
+    "text": "There were 13 roses in the vase. Jessica cut some more roses from her flower garden which had a total of 12 roses. There are now 21 roses in the vase. How many roses are left in the garden?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 152,
+    "text": "Mary is baking a cake. The recipe calls for 12 cups of flour 14 cups of sugar and 7 cups of salt. She already put in 2 cups of flour. How many more cups of flour than cups of salt does she need to add now?",
+    "Wolframe_output": [
+      [
+        0.7101583480834961,
+        1,
+        "Wolframe(\"What is the mean of Mary's baking a cake\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 160,
+    "text": "Baker made 133 cakes. If he sold 51 of them How many more cakes did baker make than those he sold?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 168,
+    "text": "For Gwen's birthday she received 8 dollars from her mom. Her dad gave her 5 more dollars. If she spent 4 dollars. How much more money did she receive from her mom than she did from her dad?",
+    "Wolframe_output": [
+      [
+        1.278954267501831,
+        1,
+        "Wolframe(\"What is the mean of Gwen's birthday\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 176,
+    "text": "Julia played tag with 7 kids on monday and 13 kids on tuesday. She played cards wtih 20 kids on wednesday. How many kids did she play tag with altogether?",
+    "Wolframe_output": [
+      [
+        0.29523682594299316,
+        3,
+        "Wolframe(Julia)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 184,
+    "text": "Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia game How many rounds did he play?",
+    "Wolframe_output": [
+      [
+        0.11246109008789062,
+        1,
+        "Wolframe(Luke(\"How many rounds did Luke play?\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 192,
+    "text": "3 red peaches, and some more green peaches are in the basket. If there are 10 more green peaches than red peaches in the basket How many green peaches are in the basket?",
+    "Wolframe_output": [
+      [
+        0.710623025894165,
+        5,
+        "Wolframe(\"What is the mean of 3 red peaches in the basket\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 200,
+    "text": "There were 53 dollars in Olivia's wallet. She collected 91 more dollars from an atm. After she visited a supermarket there were 14 dollars left. How much more money did she spend at the supermarket than she collected at the atm?",
+    "Wolframe_output": [
+      [
+        0.5822067260742188,
+        2,
+        "Wolframe(53 dollars)",
+        "\u20ac48.74 (euros) (December 1, 2023)"
+      ]
+    ]
+  },
+  {
+    "file_index": 208,
+    "text": "He then went to see the oranges being harvested. He found out that they harvest 67 sacks per day and that each sack containes 12 oranges. How many oranges are harvested if they harvest a total of 35 sacks of oranges?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 216,
+    "text": "2 birds were sitting on the fence. Some more birds came to join them. If there are a total of 6 birds on the fence now How many more birds had come to sit on the fence?",
+    "Wolframe_output": [
+      [
+        0.10076403617858887,
+        7,
+        "Wolframe(\"What is the mean of 2 birds on the fence\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 224,
+    "text": "Robin has 28 packages of gum and 13 packages of candy. There are 4 pieces in each package. How many pieces of gum does Robin have?",
+    "Wolframe_output": [
+      [
+        0.8452680110931396,
+        1,
+        "Wolframe(\"What is the mean of Robin's gum\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 232,
+    "text": "Rachel had to complete 7 pages of math homework, 11 pages of reading homework and 8 more pages of biology homework. How many more pages of reading homework than biology homework did she have?",
+    "Wolframe_output": [
+      [
+        0.7691631317138672,
+        4,
+        "Wolframe(\"What is the mean of Rachel's math homework\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 240,
+    "text": "Rachel picked 7 apples from her tree. Thereafter 2 new apples grew on the tree. Now the tree has 6 apples still on it. How many apples did the tree have to begin with?",
+    "Wolframe_output": [
+      [
+        0.7653865814208984,
+        2,
+        "Wolframe(7 apples)",
+        "serving size 7 apples (1 kg)\ntotal calories 637 | fat calories 16\n% daily value^* | \n total fat 2 g | 3%\n saturated fat 312 mg | 2%\n trans fat | \n cholesterol 0 g | 0%\n sodium 6 mg | 0%\n total carbohydrates 169 g | 56%\n dietary fiber 24 g | 94%\n sugar 131 g | \n protein 3 g | 7%\n vitamin A 12% | vitamin C 91% \n calcium 7% | iron 7% \n vitamin E 7% | thiamin 15% \n riboflavin 20% | niacin 6% \n vitamin B6 25% | folate 5% \n phosphorus 14% | magnesium 14% \n zinc 4% | \n*percent daily values are based on a 2000 calorie diet\n(averaged over different types of apple)"
+      ]
+    ]
+  },
+  {
+    "file_index": 248,
+    "text": "Baker made 121 cakes. He sold 105 of them and bought 170 new cakes. How many cakes does baker still have?",
+    "Wolframe_output": [
+      [
+        0.026388168334960938,
+        5,
+        "Wolframe(Baker(121)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 256,
+    "text": "Randy has 90 blocks. He uses 89 blocks to build a house and 63 blocks to build a tower. How many more blocks did he use to build the house than he did to build the tower?",
+    "Wolframe_output": [
+      [
+        0.7538132667541504,
+        3,
+        "Wolframe(90 blocks)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 264,
+    "text": "Zachary did 51 push-ups and David did 44 push-ups in gym class today. How many more push-ups did Zachary do than David?",
+    "Wolframe_output": [
+      [
+        0.11359548568725586,
+        4,
+        "Wolframe(21.3, 38.4, 12.7, 41.6)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 272,
+    "text": "After resting they decided to go for a swim. The depth of the water is 15 times Dean's height. Dean is 4 feet taller than Ron. If Ron stands at 13 feet How deep was the water?",
+    "Wolframe_output": [
+      [
+        0.3739938735961914,
+        16,
+        "Wolframe(Dean's height)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 280,
+    "text": "He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day. How many more sacks of unripe oranges than ripe oranges are harvested per day?",
+    "Wolframe_output": [
+      [
+        0.2720832824707031,
+        1,
+        "Wolframe(\"What is the mean of 21.3, 38.4, 12.7, 41.6\")",
+        "28.5"
+      ]
+    ]
+  },
+  {
+    "file_index": 288,
+    "text": "Haley grew 9 trees in her backyard. After a typhoon 4 died. Then she grew 5 more trees. How many trees does she have left?",
+    "Wolframe_output": [
+      [
+        0.27378320693969727,
+        3,
+        "Wolframe(Haley)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 296,
+    "text": "3 birds were sitting on the fence. 6 more storks and 2 more birds came to join them. How many more storks than birds are sitting on the fence?",
+    "Wolframe_output": [
+      [
+        1.6419169902801514,
+        1,
+        "Wolframe(\"What is the mean of 3 birds sitting on the fence\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 304,
+    "text": "2 red peaches, 6 yellow peaches and 14 green peaches are in the basket. How many more green peaches than yellow peaches are in the basket?",
+    "Wolframe_output": [
+      [
+        3.346853256225586,
+        1,
+        "Wolframe(\"What is the mean of 2 red peaches, 6 yellow peaches and 14 green peaches are in the basket\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 312,
+    "text": "Emily is making bead necklaces for her friends. She was able to make 6 necklaces and she had 18 beads. How many beads did each necklace need?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 320,
+    "text": "Paco had 28 cookies. He ate some of them and had 7 cookies left. How many cookies did Paco eat?",
+    "Wolframe_output": [
+      [
+        0.11615514755249023,
+        3,
+        "Wolframe(21.3, 38.4, 12.7, 41.6)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 328,
+    "text": "A farmer had 105 green tomatoes and 71 red tomatoes in his garden. If he picked 137 tomatoes How many tomatoes are left?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 336,
+    "text": "Dave had 59 files and 15 apps on his phone. After deleting some apps and files he had 12 apps and 30 files left. How many apps did he delete?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 344,
+    "text": "Bobby had 32 pieces of candy. He ate some pieces of candy. If he has 20 pieces of candy left How many pieces of candy did Bobby eat?",
+    "Wolframe_output": [
+      [
+        0.39858317375183105,
+        3,
+        "Wolframe(Bobby)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 352,
+    "text": "Baker made 52 pastries and 84 cakes. If he sold 102 cakes and 94 pastries How many more cakes than pastries did baker make?",
+    "Wolframe_output": [
+      [
+        0.1423511505126953,
+        3,
+        "Wolframe(Baker)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 360,
+    "text": "Randy has 86 blocks. He uses 79 blocks to build a tower and 82 blocks to build a house. How many more blocks did he use to build the house than he did to build the tower?",
+    "Wolframe_output": [
+      [
+        0.17524099349975586,
+        2,
+        "Wolframe(R[1, 2, 3, 4, 5, 6)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 368,
+    "text": "Last week Fred had 78 dollars and Jason had 31 dollars. Jason delivered newspapers and now has 57 dollars. Fred washed cars over the weekend and now has 90 dollars. How much money did Jason earn by delivering newspapers?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 376,
+    "text": "Jack received 5 emails in the morning, 8 emails in the afternoon and 72 emails in the evening. How many emails did Jack receive in the morning and afternoon?",
+    "Wolframe_output": [
+      [
+        0.12483048439025879,
+        2,
+        "Wolframe(5)",
+        "5 is an odd number."
+      ]
+    ]
+  },
+  {
+    "file_index": 384,
+    "text": "The grasshopper, the frog and the mouse had a jumping contest. The grasshopper jumped 19 inches. The frog jumped 39 inches farther than the grasshopper and the mouse jumped 94 inches lesser than the frog. How far did the frog jump?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 392,
+    "text": "Allan brought 2 balloons and Jake brought 3 balloons to the park. How many more balloons did Jake have than Allan in the park?",
+    "Wolframe_output": [
+      [
+        0.39681196212768555,
+        3,
+        "Wolframe(Jake)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 400,
+    "text": "David did 30 more push-ups than Zachary in gym class today. If David did 37 push-ups How many push-ups did Zachary do?",
+    "Wolframe_output": [
+      [
+        0.6577939987182617,
+        2,
+        "Wolframe(21.3, 38.4, 12.7, 41.6)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 408,
+    "text": "Baker made 134 pastries and 11 cakes. If he sold 140 cakes and 92 pastries How many more pastries than cakes did baker make?",
+    "Wolframe_output": [
+      [
+        0.08916091918945312,
+        3,
+        "Wolframe(Baker)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 416,
+    "text": "Every day Ryan spends 2 hours on learning english, 5 hours on learning chinese and 4 hours on learning spanish. How many more hours does he spend on learning chinese than he does on learning spanish?",
+    "Wolframe_output": [
+      [
+        0.141937255859375,
+        23,
+        "Wolframe(\"What is the mean of 2 hours of learning english than 2 hours of learning spanish\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 424,
+    "text": "18 red peaches, 14 yellow peaches and 17 green peaches are in the basket. How many red and yellow peaches are in the basket?",
+    "Wolframe_output": [
+      [
+        0.4548799991607666,
+        5,
+        "Wolframe(14 yellow peaches)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 432,
+    "text": "They decided to hold the party in their backyard. If they have 5 sets of tables and each set has 10 chairs How many more chairs than tables do they have?",
+    "Wolframe_output": [
+      [
+        1.3984375,
+        4,
+        "Wolframe(\"What is the mean of 5 sets of tables and each set has 10 chairs\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 440,
+    "text": "Bryan took a look at his books as well. He has 7 bookshelves with each having the same number of books. If he has a total of 28 books How many books are there in each bookshelf?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 448,
+    "text": "Matthew had 15 crackers. If Matthew gave equal numbers of crackers to his 5 friends and still had 10 crackers left How many crackers did each friend eat?",
+    "Wolframe_output": [
+      [
+        0.5000827312469482,
+        5,
+        "Wolframe(1.5)",
+        "1.5"
+      ]
+    ]
+  },
+  {
+    "file_index": 456,
+    "text": "Every day Ryan spends 5 hours on learning english and 4 hours on learning chinese. If he learns for 6 days How many hours does he spend on learning chinese in all?",
+    "Wolframe_output": [
+      [
+        0.2919158935546875,
+        2,
+        "Wolframe(day)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 464,
+    "text": "6 green peaches, 60 yellow peaches and 2 red peaches are in the basket. How many more green peaches than red peaches are in the basket?",
+    "Wolframe_output": [
+      [
+        0.5328700542449951,
+        10,
+        "Wolframe(\"What is the mean of 6 green peaches, 60 yellow peaches and 2 red peaches\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 472,
+    "text": "The ring toss game at the carnival made the same amount of money each day. In total in 30 days they earned 420 dollars. Together with game they earned 22 dollars. How much did ring toss game make per day?",
+    "Wolframe_output": [
+      [
+        2.7222695350646973,
+        4,
+        "Wolframe(\"What is the ring toss game at the carnival made the same amount of money each day\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 480,
+    "text": "There were 22 parents in the program and 676 people in total. How many pupils were present in the program?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 488,
+    "text": "The grasshopper and the frog had a jumping contest. The grasshopper jumped 9 inches and the frog jumped 12 inches. How much farther did the frog jump than the grasshopper?",
+    "Wolframe_output": [
+      [
+        1.498267412185669,
+        1,
+        "Wolframe(\"What is the mean of the grasshopper and the frog jumping contest\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 496,
+    "text": "In a school there are 706 girls and 222 boys. 418 more girls joined the school. How many pupils are there in the school now?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 504,
+    "text": "Bobby ate some pieces of candy. Then he ate 25 more. If he ate a total of 43 pieces of candy How many pieces of candy had he eaten at the start?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 512,
+    "text": "Winter is almost here and most animals are migrating to warmer countries. There are 38 bird families living near the mountain. If 47 bird families flew away to africa and 94 bird families flew away to asia How many more bird families flew away to asia than those that flew away to africa?",
+    "Wolframe_output": [
+      [
+        0.4234647750854492,
+        1,
+        "Wolframe(\"What is the mean of Winter's average of the birds that flew away to asia\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 520,
+    "text": "6 birds and 3 storks were sitting on the fence. 2 more storks came to join them. How many more birds than storks are sitting on the fence?",
+    "Wolframe_output": [
+      [
+        0.42049074172973633,
+        11,
+        "Wolframe(\"What is the mean of 6 birds and 3 storks\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 528,
+    "text": "A grocery store had 54 bottles of diet soda, 83 bottles of regular soda and 12 apples. How many more bottles of regular soda than diet soda did they have?",
+    "Wolframe_output": [
+      [
+        3.276333808898926,
+        4,
+        "Wolframe(54 bottles of diet soda, 83 bottles of regular soda and 12 apples)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 536,
+    "text": "Mary is baking a cake. The recipe calls for 9 cups of flour and 11 cups of sugar. She already put in 4 cups of flour. How many more cups of sugar than cups of flour does she need to add now?",
+    "Wolframe_output": [
+      [
+        0.656296968460083,
+        1,
+        "Wolframe(\"What is the mean of Mary's baking a cake\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 544,
+    "text": "There are 544 pots in each of the 10 gardens. Each pot has 32 flowers in it. How many flowers are there in all?",
+    "Wolframe_output": [
+      [
+        1.109093189239502,
+        6,
+        "Wolframe(\"What is the mean of 544 pots in each of the 10 gardens\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 552,
+    "text": "A waiter had 8 customers. After some left he still had 5 customers. Then he got 99 new customers How many customers left?",
+    "Wolframe_output": [
+      [
+        0.10993123054504395,
+        5,
+        "Wolframe(\"What is the mean of 8 customers\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 560,
+    "text": "The school is planning a field trip. The school has 17 classrooms. There are 46 school buses and a total of 92 students in the school. If all buses are full How many seats are in each bus?",
+    "Wolframe_output": [
+      [
+        0.017175674438476562,
+        1,
+        "Wolframe(\"What is the mean of the school bus seats in the school bus\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 568,
+    "text": "Josh had 9 marbles in his collection. He lost some marbles. If he has 4 marbles now How many marbles did he lose?",
+    "Wolframe_output": [
+      [
+        0.31381916999816895,
+        2,
+        "Wolframe(Josh)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 576,
+    "text": "Dave had some apps on his phone. After deleting 18 of them he had 5 left. How many apps did he have on his phone at the start?",
+    "Wolframe_output": [
+      [
+        0.15595054626464844,
+        2,
+        "Wolframe(Dave)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 584,
+    "text": "Bobby had 21 pieces of candy. He ate 5 pieces of candy. Then he ate 9 more. How many pieces of candy does he still have left?",
+    "Wolframe_output": [
+      [
+        0.4608597755432129,
+        3,
+        "Wolframe(21.3, 38.4, 12.7, 41.6)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 592,
+    "text": "A book has 3 chapters. The first chapter is 35 pages long the second chapter is 18 pages long and the third chapter is 3 pages long. How many more pages does the second chapter have than the third chapter?",
+    "Wolframe_output": [
+      [
+        0.7811729907989502,
+        1,
+        "Wolframe(\"What is the mean of 35 pages of books\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 600,
+    "text": "33 campers went rowing in the morning 34 campers went rowing in the afternoon and 10 campers went rowing in the evening. How many more campers went rowing in the afternoon than in the evening?",
+    "Wolframe_output": [
+      [
+        0.9326262474060059,
+        9,
+        "Wolframe(\"What is the mean of 33 campers went rowing in the morning\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 608,
+    "text": "Faye was placing some pencils equally into 2 rows. If she had 6 pencils How many pencils did she place in each row?",
+    "Wolframe_output": [
+      [
+        0.17597103118896484,
+        2,
+        "Wolframe(21.3, 38.4, 12.7, 41.6)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 616,
+    "text": "Allan brought 2 balloons and Jake brought 6 balloons to the park. Allan then bought 3 more balloons at the park. How many more balloons did Jake have than Allan in the park?",
+    "Wolframe_output": [
+      [
+        0.5659422874450684,
+        3,
+        "Wolframe(Jake)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 624,
+    "text": "Tiffany was collecting cans for recycling. On monday she had some bags of cans. The next day she found 4 more bags worth of cans. If she had a total of 8 bags altogether How many bags did she have on monday?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 632,
+    "text": "There were 73 parents, 724 pupils and 744 teachers in the program. How many people were present in the program?",
+    "Wolframe_output": [
+      [
+        0.7575044631958008,
+        5,
+        "Wolframe(724 pupils [744 teachers)",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 640,
+    "text": "There were 9 roses and 6 orchids in the vase. Jessica cut some more roses and orchids from her flower garden. There are now 13 orchids and 3 roses in the vase. How many more orchids than roses are there in the vase now?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 648,
+    "text": "Every day Ryan spends 3 hours on learning english and some more hours on learning chinese. If he spends a total of 4 hours on learning english and chinese everyday How many hours does he spend on learning chinese?",
+    "Wolframe_output": [
+      [
+        0.13111281394958496,
+        17,
+        "Wolframe(\"What is the mean of 3 hours of learning english and some more hours of learning chinese\")",
+        ""
+      ]
+    ]
+  },
+  {
+    "file_index": 656,
+    "text": "An industrial machine can make 3 shirts a minute. It made 4 shirts yesterday and 8 shirts today. How many minutes did the machine work in all?",
+    "Wolframe_output": [
+      [
+        0.0719614028930664,
+        3,
+        "Wolframe(machine)",
+        "1 | noun | any mechanical or electrical device that transmits or modifies energy to perform or assist in the performance of human tasks\n2 | noun | an efficient person\n3 | noun | an intricate organization that accomplishes its goals efficiently\n4 | noun | a device for overcoming resistance at one point by applying force at some other point\n5 | noun | a group that controls the activities of a political party\n6 | noun | a motor vehicle with four wheels; usually propelled by an internal combustion engine\n7 | verb | turn, shape, mold, or otherwise finish by machinery\n8 | verb | make by machinery\n(8 meanings)"
+      ]
+    ]
+  },
+  {
+    "file_index": 664,
+    "text": "A waiter had 13 customers. After some left he got 4 new customers. If he still had 9 customers How many customers left?",
+    "Wolframe_output": [
+      [
+        0.14605093002319336,
+        5,
+        "Wolframe(customers)",
+        "noun | someone who pays for goods or services"
+      ]
+    ]
+  },
+  {
+    "file_index": 672,
+    "text": "You have read 8 books from the ' crazy silly school ' series. If there are a total of 14 different books in the ' crazy silly school ' series How many more do you still have to read?",
+    "Wolframe_output": [
+      [
+        0.2073829174041748,
+        13,
+        "Wolframe(\"What is the mean of 21.3, 38.4, 12.7, 41.6\")",
+        "28.5"
+      ]
+    ]
+  },
+  {
+    "file_index": 680,
+    "text": "Last week Fred had 114 dollars and Jason had 22 dollars. They washed cars over the weekend and now Fred has 21 dollars and Jason has 78 dollars. How much money did Jason make over the weekend?",
+    "Wolframe_output": []
+  },
+  {
+    "file_index": 688,
+    "text": "He then went to see the oranges being harvested. He found out that they harvest 38 sacks per day and that each sack containes 42 oranges. How many sacks of oranges will they have after 49 days of harvest?",
+    "Wolframe_output": [
+      [
+        0.2616133689880371,
+        1,
+        "Wolframe(\"What is the mean of 21.3, 38.4, 12.7, 41.6\")",
+        "28.5"
+      ]
+    ]
+  },
+  {
+    "file_index": 696,
+    "text": "A farmer had 90 tomatoes in his garden. If he picked 154 of them yesterday and 50 today. How many tomatoes did he pick in all?",
+    "Wolframe_output": [
+      [
+        0.12658286094665527,
+        6,
+        "Wolframe(21.3, 38.4, 12.7, 41.6)",
+        ""
+      ]
+    ]
+  }
+]

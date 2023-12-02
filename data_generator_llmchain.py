@@ -6,7 +6,7 @@ from transformers import (
     AutoTokenizer,
 )
 from datasets import load_dataset
-from prompts import retrieval_prompt
+from prompts import llmchain_prompt
 from data_generation.retrieval import RetrievalPostprocessing
 from data_generation.calendar import CalendarPostprocessing
 from data_generation.calculator import CalculatorPostprocessing
@@ -22,8 +22,8 @@ if __name__ == "__main__":
     parser.add_argument('--device_id', type=int, default=0)
     parser.add_argument("--num_devices", type=int, default=8)
     args = parser.parse_args()
-    gpt_tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6B")
-    prompt_tokens = gpt_tokenizer(retrieval_prompt, return_tensors="pt")["input_ids"]
+    gpt_tokenizer = AutoTokenizer.from_pretrained("Writer/palmyra-small")
+    prompt_tokens = gpt_tokenizer(llmchain_prompt, return_tensors="pt")["input_ids"]
     start_tokens = [
         gpt_tokenizer("[")["input_ids"][0],
         gpt_tokenizer(" [")["input_ids"][0],
@@ -34,12 +34,12 @@ if __name__ == "__main__":
     ]  # TODO: keep second?
     api_handler = LLMChainPostprocessing(start_tokens, end_tokens)
     model = AutoModelForCausalLM.from_pretrained(
-        "EleutherAI/gpt-j-6B",
-        revision="float16",
-        torch_dtype=torch.float16,
+        "Writer/palmyra-small",
+        #revision="float16",
+        #torch_dtype=torch.float16,
         low_cpu_mem_usage=True,
     ).cuda()
-    dataset = load_dataset("c4", "en", split="train", streaming=True)
+    dataset = load_dataset("c4", "realnewslike", split="train", streaming=True)
     iter_data = iter(dataset)
     test = False
     counter = 0
@@ -82,7 +82,7 @@ if __name__ == "__main__":
             eta_m = eta_m - (eta_h*60)
             eta_s = eta_s - ((eta_m*60) + (eta_h*60*60))
             print(f"Found: {found_examples}/{num_examples}, ETA: {eta_h}H:{eta_m}M:{eta_s}s")
-            if found_examples//100 > prev_found//100:
+            if found_examples//1 > prev_found//1:
                 with open(f"llmchain_data_{args.device_id}.json", 'w') as f:
                     json.dump(output_dataset, f, indent=2)
             counter += 1

@@ -1,3 +1,4 @@
+import os
 import copy
 import requests
 import calendar
@@ -19,7 +20,7 @@ from langchain.chains import LLMChain
 from langchain import Cohere, PromptTemplate
 
 # Optional imports
-from googleapiclient.discovery import build
+#from googleapiclient.discovery import build
 
 
 """
@@ -186,11 +187,19 @@ Adapted from: https://levelup.gitconnected.com/3-ways-to-write-a-calculator-in-p
 
 
 def Calculator(input_query: str):
+    #TODO: Check logic if it works
+    # currently only if 1 term return a score above 0
+    print("Input Query: ", input_query)
     operators = {"+": add, "-": sub, "*": mul, "/": truediv}
     if input_query.isdigit():
         return float(input_query)
+    new_input = ""
     for c in operators.keys():
         left, operator, right = input_query.partition(c)
+        new_input += left+operator+right
+    # print("evaluate: ", eval(new_input))
+    # return eval(new_input)
+
         if operator in operators:
             return round(operators[operator](Calculator(left), Calculator(right)), 2)
 
@@ -264,12 +273,32 @@ wolfarm_alpha_appid - your Wolfram Alpha API key
 
 
 def WolframAlphaCalculator(input_query: str):
-    wolfram_alpha_appid = "YOUR_WOLFRAM_ALPHA_APPID"
-    wolfram_client = wolframalpha.Client(wolfram_alpha_appid)
-    res = wolfram_client.query(input_query)
-    assumption = next(res.pods).text
-    answer = next(res.results).text
-    return f"Assumption: {assumption} \nAnswer: {answer}"
+    WOLFRAME_API_KEY = os.environ.get('WOLFRAME_API_KEY')
+    print("Key from system: ",WOLFRAME_API_KEY )
+    #wolfram_alpha_appid = "XT7XK3-P9EQETTLJ2"
+    client = wolframalpha.Client(WOLFRAME_API_KEY)
+    #input_query = "What is the mean of 87 and 290"
+    try:
+        res = client.query(input=input_query)
+        ans = next(res.results).text
+    except (StopIteration):
+        ans = ""
+    print("Answer: ", ans)
+    return ans
+    # print("Object: ", next(res.results))
+    # if next(res.results).success == False:
+    #     return ""
+    # else:
+    #     return next(res.results).text
+    # ans  = next(res.results).text
+    # print("Result: ", ans)
+    # return ans
+    # wolfram_client = wolframalpha.Client(wolfram_alpha_appid)
+    # res = wolfram_client.query(input_query)
+    # #assumption = next(res.pods).text
+    # answer = next(res.results).text
+    # print("\n Answer:", answer)
+    # return answer
 
 
 """

@@ -11,8 +11,8 @@ import dateutil.parser as dparser
 
 
 # TODO: Per API?
-MAX_BATCH_SIZE = 1  # My 3090 is weak 😔
-N = 128  # SEQ Len
+MAX_BATCH_SIZE = 1 
+N = 32  # SEQ Len
 M = 16  # Min Loss Span To Consider
 MAX_LEN = 1024  # Maximum calculator length
 
@@ -44,10 +44,19 @@ class CalculatorPostprocessing(APICallPostprocessing):
         generated_texts = list()
         max_token_len = N
         max_token_len_base = N
+        print("\n**in add api_calls**")
+        #print("Texts to test: ", texts_to_test)
+        # print("Outputs dict: ")
+        # print(outputs)
+        # print("*****")
         for j in range(len(outputs)):
             outputs[j]["Calculator"] = outputs[j]["generated_text"].replace(
                 texts_to_test[candidate], ""
             )
+            print("afte adding cacluclator key")
+            #print("Outputs dict: ")
+            print(outputs[j]["Calculator"])
+            print("*****")
             outputs[j]["Generated"] = outputs[j]["generated_text"].split("Output:")[-1]
             if "]" in outputs[j]["Calculator"]:
                 outputs[j]["Calculator"] = (
@@ -69,6 +78,8 @@ class CalculatorPostprocessing(APICallPostprocessing):
                 if outputs[j]["Calculator"] is None:
                     continue
                 outputs[j]["Calculator_output"] = [outputs[j]["Calculator_text"][1:], str(outputs[j]["Calculator"])]
+                print("Calculator_output")
+                print(outputs[j]["Calculator_output"])
                 outputs[j]["Calculator_text"] = (
                     outputs[j]["Calculator_text"]
                     + "->"
@@ -79,6 +90,7 @@ class CalculatorPostprocessing(APICallPostprocessing):
                     outputs[j]["Calculator_text"] + "\n",
                     return_tensors="pt",
                 )["input_ids"].cuda()
+                print("Calculator_text after all modifications:",  outputs[j]["Calculator_text"])
                 test_inputs = torch.concat(
                     [
                         test_inputs.cuda(),
@@ -111,8 +123,14 @@ class CalculatorPostprocessing(APICallPostprocessing):
     def parse_article(
         self, data: dict, model: PreTrainedModel, tokenizer: PreTrainedTokenizerBase
     ):
+        print("***In Parse Article***")
         outputs = list()
         tokens = tokenizer(data["text"], return_tensors="pt")["input_ids"]
+        global N
+        N= tokens.shape[1] - 1
+        global M
+        if N < M:
+            M = N-2
         for i in range((tokens.shape[1]-1)//N):
             if (N * (i + 1)) > tokens.shape[1]:
                 continue
@@ -121,23 +139,23 @@ class CalculatorPostprocessing(APICallPostprocessing):
                 :,
                 int(tokens.shape[1] + (-N * (i + 1))) : int(tokens.shape[1] + (-N * i)),
             ]
-            # print(tokens.shape)
             string = tokenizer.decode(input_tokens[0])
-            # print(ret_strings)
+            print("Decoded string from tokenizer: ", string)
             model_input = tokenizer(
-                calculator_prompt.replace("<REPLACEGPT>", string) + string,
+                calculator_prompt.replace("<REPLACEGPT>", string)+string,
                 return_tensors="pt",
             )["input_ids"]
-            # print(string)
             # print(model_input.shape)
             with torch.no_grad():
                 output = model(model_input.cuda()).logits.cpu()[:, -N:]
             new_outputs = self.generate_continuations(
-                model_input,
+                model_input, #tokenized cal prompt
                 output,
-                labels,
-                model,
+                labels, #tokens of actual input
+                model, #model of the model_inputs
                 tokenizer,
+                N,
+                M
             )
             for output in new_outputs:
                 if output is None:

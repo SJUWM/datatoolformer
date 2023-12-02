@@ -106,6 +106,8 @@ class CalendarPostprocessing(APICallPostprocessing):
     ):
         outputs = list()
         tokens = tokenizer(data["text"], return_tensors="pt")["input_ids"]
+        #print(tokens)
+        #print("tokens",(tokens.shape[1]-1)//N)
         for i in range((tokens.shape[1]-1)//N):
             if (N * (i + 1)) > tokens.shape[1]:
                 continue
@@ -115,24 +117,22 @@ class CalendarPostprocessing(APICallPostprocessing):
                 int(tokens.shape[1] + (-N * (i + 1))) : int(tokens.shape[1] + (-N * i)),
             ]
             ret_tokens = tokens[:, : (-N * (i + 1) - 1)]
-            print(tokens.shape)
             string = tokenizer.decode(input_tokens[0])
             # print(ret_strings)
             model_input = tokenizer(
                 calendar_prompt.replace("<REPLACEGPT>", string) + string,
                 return_tensors="pt",
             )["input_ids"]
-            print(string)
-            print(model_input.shape)
             with torch.no_grad():
                 output = model(model_input.cuda()).logits.cpu()[:, -N:]
+
             new_outputs = self.generate_continuations(
                 model_input,
                 output,
                 labels,
                 model,
                 tokenizer,
-                dparser.parse(data["url"], fuzzy=True),
+                dparser.parse(data["text"], fuzzy=True),
             )
             for output in new_outputs:
                 if output is None:

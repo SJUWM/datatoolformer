@@ -9,9 +9,9 @@ from transformers import (
 )
 from torch import nn
 
-MAX_BATCH_SIZE = 1  # My 3090 is weak 😔
-N = 64  # SEQ Len
-M = 16  # Min Loss Span To Consider
+MAX_BATCH_SIZE = 1  
+N1 = 32  # SEQ Len
+M2 = 16  # Min Loss Span To Consider
 
 
 class APICallPostprocessing:
@@ -52,6 +52,7 @@ class APICallPostprocessing:
         :param tokenizer:
         :return: Values and Indices
         """
+        #TODO: Find if the indices for start tokens and input tokens are correct
         # First, figure out locations...
         probs = torch.softmax(input_logits, dim=-1)
         # Make sure we don't keep any tokens that are supposed to be [
@@ -67,7 +68,7 @@ class APICallPostprocessing:
             dim=0,
         )
         max_start_tokens = max_start_tokens * remove_tokens
-        return torch.topk(max_start_tokens[:, : -(M + 1)], k=self.k_values, dim=1)
+        return torch.topk(max_start_tokens[:, : -(M1 + 1)], k=self.k_values, dim=1)
 
     def create_candidates(
         self,
@@ -100,20 +101,22 @@ class APICallPostprocessing:
         num_to_keeps = list()
         texts_to_test = list()
         max_index = 0
+        print("\n**In create candidate***")
+        #print("shape of indices: ", input_tokens.shape)
         for i, batch in enumerate(indices):
             for j, index in enumerate(batch):
                 if values[i][j] < self.minimum_percentage:
                     continue
                 # Get base output
                 base_outputs = model(input_tokens[:, input_start:].cuda()).logits[
-                    :, index : index + M
+                    :, index : index + M1
                 ]
                 # Find starting location...
                 num_keep = int(input_tokens[:, input_start:].shape[1] - index)
                 # Calculate loss without API
                 base_loss = criterion(
                     base_outputs.view(-1, base_outputs.size(-1)),
-                    labels[:, index : index + M].cuda().view(-1),
+                    labels[:, index : index + M1].cuda().view(-1),
                 )
                 # For padding later
                 max_index = max(max_index, index)
@@ -135,6 +138,8 @@ class APICallPostprocessing:
                     outputs[-1][k]["base_outputs"] = base_outputs
                 # So we know where to look
                 num_to_keeps.append(num_keep)
+                # print("Outputs in create candidate**")
+                # print(outputs)
         return outputs, num_to_keeps, texts_to_test, max_index
 
     def add_api_calls(
@@ -174,6 +179,8 @@ class APICallPostprocessing:
         labels: torch.Tensor,
         model: PreTrainedModel,
         tokenizer: PreTrainedTokenizerBase,
+        N: int,
+        M: int,
         *args,
         **kwargs,
     ):
@@ -189,9 +196,15 @@ class APICallPostprocessing:
         :param kwargs: kwargs to pass to add_api_calls
         :return: individual candidate outputs
         """
+        print("\n***In Generate continuations***")
+        global N1 
+        N1= N
+        global M1
+        M1= M
         # Setup token stuff...
         input_start = input_tokens.shape[1] - input_logits.shape[1]
         start_str = tokenizer.decode(input_tokens[:, :input_start][0])
+        #print("start string: ", start_str)
         # Find top tokens...
         values, indices = self.filter_continuations(
             input_tokens, input_logits, labels, input_start, tokenizer

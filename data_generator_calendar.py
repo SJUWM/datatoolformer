@@ -22,7 +22,7 @@ if __name__ == "__main__":
     parser.add_argument('--device_id', type=int, default=0)
     parser.add_argument("--num_devices", type=int, default=8)
     args = parser.parse_args()
-    gpt_tokenizer = AutoTokenizer.from_pretrained("bigscience/bloom-560m")
+    gpt_tokenizer = AutoTokenizer.from_pretrained("Writer/palmyra-small")
     prompt_tokens = gpt_tokenizer(calendar_prompt, return_tensors="pt")["input_ids"]
     start_tokens = [
         gpt_tokenizer("[")["input_ids"][0],
@@ -34,13 +34,16 @@ if __name__ == "__main__":
     ]  # TODO: keep second?
     api_handler = CalendarPostprocessing(start_tokens, end_tokens)
     model = AutoModelForCausalLM.from_pretrained(
-        "bigscience/bloom-560m",
+        "Writer/palmyra-small",
         # revision="float16",
         # torch_dtype=torch.float16,
         low_cpu_mem_usage=True,
     ).cuda()
-    dataset = load_dataset("c4", "en", split="train", streaming=True)
+    dataset = load_dataset("c4", "realnewslike", split="train", streaming=True)
+    # print(dataset)
+    # print("***")
     iter_data = iter(dataset)
+    #iter_data2 = iter(dataset)
     test = False
     counter = 0
     file_counter = 0
@@ -56,7 +59,7 @@ if __name__ == "__main__":
             for item in output_dataset:
                 num_examples -= len(item['calendar_outputs'])
     while found_examples < num_examples:
-        data = next(iter_data)
+        data=next(iter_data)
         if file_counter < start_count:
             file_counter += 1
             continue
@@ -73,7 +76,7 @@ if __name__ == "__main__":
                 eta_h = eta_m // 60
                 eta_m = eta_m - (eta_h * 60)
                 eta_s = eta_s - ((eta_m * 60) + (eta_h * 60 * 60))
-                print(f"device {args.device_id} Found: {found_examples}/{num_examples}, ETA: {eta_h}H:{eta_m}M:{eta_s}s")
+                #print(f"device {args.device_id} Found: {found_examples}/{num_examples}, ETA: {eta_h}H:{eta_m}M:{eta_s}s")
                 continue
             output_dataset.append(
                 {
@@ -82,6 +85,7 @@ if __name__ == "__main__":
                     "calendar_outputs": data_outputs
                 }
             )
+            #print("output_dataset", output_dataset)
             prev_found = found_examples
             found_examples += len(output_dataset[-1]["calendar_outputs"])
             eta_s = (num_examples - found_examples) * (time.process_time()-start_time) / max(1, found_examples)
@@ -89,11 +93,13 @@ if __name__ == "__main__":
             eta_h = eta_m // 60
             eta_m = eta_m - (eta_h*60)
             eta_s = eta_s - ((eta_m*60) + (eta_h*60*60))
-            print(f"device {args.device_id} Found: {found_examples}/{num_examples}, ETA: {eta_h}H:{eta_m}M:{eta_s}s")
+            #print(f"device {args.device_id} Found: {found_examples}/{num_examples}, ETA: {eta_h}H:{eta_m}M:{eta_s}s")
             if found_examples//2 > prev_found//2:
                 with open(f"calendar_data_{args.device_id}.json", 'w') as f:
                     json.dump(output_dataset, f, indent=2)
             counter += 1
         file_counter += 1
+        data = next(iter_data)
     with open(f"calendar_data_{args.device_id}.json", 'w') as f:
         json.dump(output_dataset, f, indent=2)
+    print("END")

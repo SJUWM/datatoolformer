@@ -1,0 +1,434 @@
+[
+  {
+    "file_index": 0,
+    "text": "Dave had 15 apps on his phone. He added 71 new apps. After deleting some he had 14 left. How many more apps did he delete than he added?",
+    "calculator_outputs": [
+      [
+        0.23280572891235352,
+        2,
+        "Calculator(14)",
+        "14.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 8,
+    "text": "Frank put 11 pieces of candy in each bag. If he had 22 pieces of candy How many bags would he have?",
+    "calculator_outputs": [
+      [
+        0.4079127311706543,
+        2,
+        "Calculator(11)",
+        "11.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 16,
+    "text": "Jake has 3 fewer peaches than Steven who has 8 more peaches than Jill. Steven has 5 peaches. How many more peaches does Jake have than Jill?",
+    "calculator_outputs": [
+      [
+        0.1257944107055664,
+        2,
+        "Calculator(1)",
+        "1.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 24,
+    "text": "Jack received 3 emails in the afternoon, 6 emails in the morning and some more in the evening. If he received a total of 10 emails in the day How many emails did jack receive in the evening?",
+    "calculator_outputs": [
+      [
+        0.10929059982299805,
+        2,
+        "Calculator(10)",
+        "10.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 32,
+    "text": "13 campers went rowing and 59 campers went hiking in the morning. 21 campers went rowing in the afternoon. How many campers went rowing in all?",
+    "calculator_outputs": [
+      [
+        0.2975890636444092,
+        7,
+        "Calculator(13)",
+        "13.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 40,
+    "text": "Randy has 37 blocks. He uses 33 blocks to build a tower and 13 blocks to build a house. How many more blocks did he use to build the tower than he did to build the house?",
+    "calculator_outputs": [
+      [
+        0.34659266471862793,
+        3,
+        "Calculator(3)",
+        "3.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 48,
+    "text": "Matthew gave equal numbers of crackers to his 18 friends. If he had 36 crackers How many crackers did each person eat?",
+    "calculator_outputs": [
+      [
+        0.4804718494415283,
+        9,
+        "Calculator(36)",
+        "36.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 56,
+    "text": "Frank had 42 pieces of candy. If he put them equally into 2 bags How many pieces of candy are in each bag?",
+    "calculator_outputs": [
+      [
+        0.8786354064941406,
+        2,
+        "Calculator(42)",
+        "42.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 64,
+    "text": "Haley grew 14 trees in her backyard. After a typhoon 9 died. How many more trees died in the typhoon than those that survived?",
+    "calculator_outputs": [
+      [
+        0.11981725692749023,
+        3,
+        "Calculator(14)",
+        "14.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 72,
+    "text": "Dave had 19 apps on his phone. He deleted 5 apps. How many apps are left on his phone?",
+    "calculator_outputs": [
+      [
+        0.328155517578125,
+        2,
+        "Calculator(19)",
+        "19.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 80,
+    "text": "Jack received 10 emails in the morning, 7 emails in the afternoon and 17 emails in the evening. How many more emails did Jack receive in the morning than in the afternoon?",
+    "calculator_outputs": [
+      [
+        0.09265685081481934,
+        2,
+        "Calculator(10)",
+        "10.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 88,
+    "text": "Paige was helping her mom plant flowers and together they planted 36 seeds. They put 12 seeds in each flower bed and only 58 seeds grew into flowers in each flower bed. How many flower beds did they have?",
+    "calculator_outputs": [
+      [
+        0.06685543060302734,
+        17,
+        "Calculator(36)",
+        "36.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 96,
+    "text": "Paul had 134 books. After giving 39 books to his friend and selling some books in a garage sale he had 68 books left. How many books did he sell in the garage sale?",
+    "calculator_outputs": [
+      [
+        0.31552791595458984,
+        4,
+        "Calculator(134)",
+        "134.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 104,
+    "text": "Zachary did 51 push-ups and David did 44 push-ups in gym class today. How many more push-ups did Zachary do than David?",
+    "calculator_outputs": [
+      [
+        0.07090330123901367,
+        4,
+        "Calculator(1)",
+        "1.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 112,
+    "text": "For the walls of the house he would use 13 large planks of wood. If each plank of wood needs 17 pieces of nails to be secured and in addition 8 nails are needed for some smaller planks. How many nails does John need for the house wall?",
+    "calculator_outputs": [
+      [
+        0.18858957290649414,
+        22,
+        "Calculator(12)",
+        "12.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 120,
+    "text": "Dave had 17 apps and 21 files on his phone. After deleting some apps and files he had 3 apps and 7 files left. How many files did he delete?",
+    "calculator_outputs": [
+      [
+        0.09522795677185059,
+        5,
+        "Calculator(17)",
+        "17.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 120,
+    "text": "Matthew gave equal numbers of crackers to his 18 friends. If he had 36 crackers How many crackers did each person eat?",
+    "calculator_outputs": [
+      [
+        0.4804718494415283,
+        9,
+        "Calculator(36)",
+        "36.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 128,
+    "text": "Frank had 42 pieces of candy. If he put them equally into 2 bags How many pieces of candy are in each bag?",
+    "calculator_outputs": [
+      [
+        0.8786354064941406,
+        2,
+        "Calculator(42)",
+        "42.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 136,
+    "text": "Haley grew 14 trees in her backyard. After a typhoon 9 died. How many more trees died in the typhoon than those that survived?",
+    "calculator_outputs": [
+      [
+        0.11981725692749023,
+        3,
+        "Calculator(14)",
+        "14.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 144,
+    "text": "Dave had 19 apps on his phone. He deleted 5 apps. How many apps are left on his phone?",
+    "calculator_outputs": [
+      [
+        0.328155517578125,
+        2,
+        "Calculator(19)",
+        "19.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 152,
+    "text": "Jack received 10 emails in the morning, 7 emails in the afternoon and 17 emails in the evening. How many more emails did Jack receive in the morning than in the afternoon?",
+    "calculator_outputs": [
+      [
+        0.09265685081481934,
+        2,
+        "Calculator(10)",
+        "10.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 160,
+    "text": "Paige was helping her mom plant flowers and together they planted 36 seeds. They put 12 seeds in each flower bed and only 58 seeds grew into flowers in each flower bed. How many flower beds did they have?",
+    "calculator_outputs": [
+      [
+        0.06685543060302734,
+        17,
+        "Calculator(36)",
+        "36.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 168,
+    "text": "Paul had 134 books. After giving 39 books to his friend and selling some books in a garage sale he had 68 books left. How many books did he sell in the garage sale?",
+    "calculator_outputs": [
+      [
+        0.31552791595458984,
+        4,
+        "Calculator(134)",
+        "134.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 176,
+    "text": "Zachary did 51 push-ups and David did 44 push-ups in gym class today. How many more push-ups did Zachary do than David?",
+    "calculator_outputs": [
+      [
+        0.07090330123901367,
+        4,
+        "Calculator(1)",
+        "1.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 184,
+    "text": "For the walls of the house he would use 13 large planks of wood. If each plank of wood needs 17 pieces of nails to be secured and in addition 8 nails are needed for some smaller planks. How many nails does John need for the house wall?",
+    "calculator_outputs": [
+      [
+        0.18858957290649414,
+        22,
+        "Calculator(12)",
+        "12.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 192,
+    "text": "Dave had 17 apps and 21 files on his phone. After deleting some apps and files he had 3 apps and 7 files left. How many files did he delete?",
+    "calculator_outputs": [
+      [
+        0.09522795677185059,
+        5,
+        "Calculator(17)",
+        "17.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 200,
+    "text": "Baker's friend bought 137 cakes from him. If he had made 169 cakes initially How many cakes would baker still have?",
+    "calculator_outputs": [
+      [
+        0.2643413543701172,
+        7,
+        "Calculator(137)",
+        "137.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 208,
+    "text": "Faye was placing 30 pencils into rows with 5 pencils in each row. How many rows could she make?",
+    "calculator_outputs": [
+      [
+        0.337571382522583,
+        4,
+        "Calculator(30)",
+        "30.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 216,
+    "text": "Dave had 16 apps and 77 files on his phone. After deleting some apps and files he had 5 apps and 23 files left. How many apps did he delete?",
+    "calculator_outputs": [
+      [
+        0.012769222259521484,
+        5,
+        "Calculator(16)",
+        "16.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 224,
+    "text": "41 campers went rowing and 4 campers went hiking in the morning. 26 campers went rowing in the afternoon. How many campers went rowing and hiking in all?",
+    "calculator_outputs": [
+      [
+        0.5763349533081055,
+        7,
+        "Calculator(41)",
+        "41.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 232,
+    "text": "Matthew had 15 crackers. If Matthew gave equal numbers of crackers to his 5 friends and still had 10 crackers left How many crackers did each friend eat?",
+    "calculator_outputs": [
+      [
+        0.6642932891845703,
+        2,
+        "Calculator(15)",
+        "15.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 240,
+    "text": "Zachary did 19 push-ups in gym class today. David did 39 more push-ups than Zachary. John did 13 push-ups less than david. How many push-ups did David do?",
+    "calculator_outputs": [
+      [
+        0.05537891387939453,
+        4,
+        "Calculator(14)",
+        "14.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 248,
+    "text": "He had 15 aquariums for saltwater animals and 62 aquariums for freshwater animals. Each aquarium has 19 animals in it. How many animals does he have in total?",
+    "calculator_outputs": [
+      [
+        0.0001537799835205078,
+        2,
+        "Calculator(15)",
+        "15.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 256,
+    "text": "Dave had 11 apps and 3 files on his phone. After deleting some apps and files he had 24 files and 2 apps left. How many more files than apps does he have left on the phone?",
+    "calculator_outputs": [
+      [
+        0.05165553092956543,
+        5,
+        "Calculator(11)",
+        "11.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 264,
+    "text": "A waiter had 11 customers. After some left he still had 3 customers. How many more customers left than those that stayed behind?",
+    "calculator_outputs": [
+      [
+        0.44811272621154785,
+        3,
+        "Calculator(11)",
+        "11.0"
+      ]
+    ]
+  },
+  {
+    "file_index": 272,
+    "text": "Matthew had 22 crackers and 34 cakes. If Matthew gave equal numbers of crackers and cakes to his 11 friends How many crackers did each person eat?",
+    "calculator_outputs": [
+      [
+        0.4400320053100586,
+        2,
+        "Calculator(11)",
+        "11.0"
+      ]
+    ]
+  }
+]

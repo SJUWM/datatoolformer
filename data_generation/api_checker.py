@@ -2,9 +2,11 @@
 from dataclasses import dataclass
 from transformers import PreTrainedTokenizerBase
 import dateutil.parser as dparser
+from calendar import IllegalMonthError
 import random
 import re
 
+N=10
 
 @dataclass
 class AvailableAPIs:
@@ -14,9 +16,10 @@ class AvailableAPIs:
     calendar: bool = True
     calculator: bool = True
     llmchain: bool = True
+    wolframe: bool = True
 
     def check_any_available(self):
-        return any([self.retrieval, self.calendar, self.calculator])
+        return any([self.wolframe, self.calendar, self.calculator])
 
 
 def check_apis_available(
@@ -30,7 +33,6 @@ def check_apis_available(
     :return: AvailableAPIs
     """
     tokenized_data = tokenizer(data["text"])["input_ids"]
-    # print(data)
     available = AvailableAPIs()
     # In case we need a different version, found this here:
     # https://stackoverflow.com/questions/28198370/regex-for-validating-correct-input-for-calculator
@@ -39,20 +41,26 @@ def check_apis_available(
         available.retrieval = False
     try:
         # date = dparser.parse(data["text"], fuzzy=True)
-        date = dparser.parse(data["url"], fuzzy=True)
-        print(date)
-    except (ValueError, OverflowError):
+        date = dparser.parse(data["text"], fuzzy=True)
+        #print(date)
+    except (ValueError, OverflowError, IllegalMonthError, TypeError):
         available.calendar = False
     available.calculator = False
+    available.wolframe = False
     tried_rand = False
-    for i in range(len(tokenized_data) // 100):
-        text = tokenizer.decode(tokenized_data[i * 100 : (i + 1) * 100])
+    if(len(tokenized_data) < 128):
+        n=len(tokenized_data)
+        print(n)
+    for i in range(len(tokenized_data) // n):
+        text = tokenizer.decode(tokenized_data[i * n : (i + 1) * n])
+        print("text: ", text)
 
         operators = bool(re.search(calc_pattern, text))
         equals = any(
-            ["=" in text, "equal to" in text, "total of" in text, "average of" in text]
+            ["=" in text, "equal to" in text, "total of" in text, "average of" in text, "How many"]
         )
-        if not (operators and equals) and not tried_rand:
+        #print("\nAPI checker found equals: " + str(equals) + "operator: "+ str(operators))
+        if not (operators or equals) and not tried_rand:
             tried_rand = True
             text = text.replace("\n", " ")
             text = text.split(" ")
@@ -60,7 +68,9 @@ def check_apis_available(
             if len(text) >= 3:
                 if random.randint(0, 99) == 0:
                     available.calculator = True
-        else:
+                    available.wolframe = True
+        else:          
             available.calculator = True
+            available.wolframe = True
 
     return available

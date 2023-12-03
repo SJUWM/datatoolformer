@@ -1,0 +1,322 @@
+{
+  "0": {
+    "text": "A grocery store had 81 bottles of regular soda, 60 bottles of diet soda and 60 bottles of lite soda. How many more bottles of regular soda did they have than diet soda?",
+    "outputs": [
+      [
+        1,
+        "Calculator(1)",
+        "1.0"
+      ]
+    ]
+  },
+  "8": {
+    "text": "Jack received a total of 9 emails in the day. If he received 7 emails in the morning and some more in the afternoon How many emails did Jack receive in the afternoon?",
+    "outputs": [
+      [
+        1,
+        "Calculator(9)",
+        "9.0"
+      ]
+    ]
+  },
+  "16": {
+    "text": "Dave had 59 files and 15 apps on his phone. After deleting some apps and files he had 12 apps and 30 files left. How many apps did he delete?",
+    "outputs": [
+      [
+        1,
+        "Calculator(12)",
+        "12.0"
+      ]
+    ]
+  },
+  "24": {
+    "text": "A grocery store had a total of 30 bottles of which 28 were bottles of regular soda and the rest were bottles of diet soda. How many bottles of diet soda did they have?",
+    "outputs": [
+      [
+        1,
+        "Calculator(30)",
+        "30.0"
+      ]
+    ]
+  },
+  "1": {
+    "text": "A grocery store had 81 bottles of regular soda, 60 bottles of diet soda and 60 bottles of lite soda. How many more bottles of regular soda did they have than diet soda?",
+    "outputs": [
+      [
+        1,
+        "Calculator(1)",
+        "1.0"
+      ]
+    ]
+  },
+  "9": {
+    "text": "Jack received a total of 9 emails in the day. If he received 7 emails in the morning and some more in the afternoon How many emails did Jack receive in the afternoon?",
+    "outputs": [
+      [
+        1,
+        "Calculator(9)",
+        "9.0"
+      ]
+    ]
+  },
+  "17": {
+    "text": "Dave had 59 files and 15 apps on his phone. After deleting some apps and files he had 12 apps and 30 files left. How many apps did he delete?",
+    "outputs": [
+      [
+        1,
+        "Calculator(12)",
+        "12.0"
+      ]
+    ]
+  },
+  "25": {
+    "text": "A grocery store had a total of 30 bottles of which 28 were bottles of regular soda and the rest were bottles of diet soda. How many bottles of diet soda did they have?",
+    "outputs": [
+      [
+        1,
+        "Calculator(30)",
+        "30.0"
+      ]
+    ]
+  },
+  "2": {
+    "text": "A grocery store had 81 bottles of regular soda, 60 bottles of diet soda and 60 bottles of lite soda. How many more bottles of regular soda did they have than diet soda?",
+    "outputs": [
+      [
+        1,
+        "Calculator(1)",
+        "1.0"
+      ]
+    ]
+  },
+  "10": {
+    "text": "Jack received a total of 9 emails in the day. If he received 7 emails in the morning and some more in the afternoon How many emails did Jack receive in the afternoon?",
+    "outputs": [
+      [
+        1,
+        "Calculator(9)",
+        "9.0"
+      ]
+    ]
+  },
+  "18": {
+    "text": "Dave had 59 files and 15 apps on his phone. After deleting some apps and files he had 12 apps and 30 files left. How many apps did he delete?",
+    "outputs": [
+      [
+        1,
+        "Calculator(12)",
+        "12.0"
+      ]
+    ]
+  },
+  "26": {
+    "text": "A grocery store had a total of 30 bottles of which 28 were bottles of regular soda and the rest were bottles of diet soda. How many bottles of diet soda did they have?",
+    "outputs": [
+      [
+        1,
+        "Calculator(30)",
+        "30.0"
+      ]
+    ]
+  },
+  "3": {
+    "text": "A grocery store had 81 bottles of regular soda, 60 bottles of diet soda and 60 bottles of lite soda. How many more bottles of regular soda did they have than diet soda?",
+    "outputs": [
+      [
+        1,
+        "Calculator(1)",
+        "1.0"
+      ]
+    ]
+  },
+  "11": {
+    "text": "Jack received a total of 9 emails in the day. If he received 7 emails in the morning and some more in the afternoon How many emails did Jack receive in the afternoon?",
+    "outputs": [
+      [
+        1,
+        "Calculator(9)",
+        "9.0"
+      ]
+    ]
+  },
+  "19": {
+    "text": "Dave had 59 files and 15 apps on his phone. After deleting some apps and files he had 12 apps and 30 files left. How many apps did he delete?",
+    "outputs": [
+      [
+        1,
+        "Calculator(12)",
+        "12.0"
+      ]
+    ]
+  },
+  "27": {
+    "text": "A grocery store had a total of 30 bottles of which 28 were bottles of regular soda and the rest were bottles of diet soda. How many bottles of diet soda did they have?",
+    "outputs": [
+      [
+        1,
+        "Calculator(30)",
+        "30.0"
+      ]
+    ]
+  },
+  "4": {
+    "text": "A grocery store had 81 bottles of regular soda, 60 bottles of diet soda and 60 bottles of lite soda. How many more bottles of regular soda did they have than diet soda?",
+    "outputs": [
+      [
+        1,
+        "Calculator(1)",
+        "1.0"
+      ]
+    ]
+  },
+  "12": {
+    "text": "Jack received a total of 9 emails in the day. If he received 7 emails in the morning and some more in the afternoon How many emails did Jack receive in the afternoon?",
+    "outputs": [
+      [
+        1,
+        "Calculator(9)",
+        "9.0"
+      ]
+    ]
+  },
+  "20": {
+    "text": "Dave had 59 files and 15 apps on his phone. After deleting some apps and files he had 12 apps and 30 files left. How many apps did he delete?",
+    "outputs": [
+      [
+        1,
+        "Calculator(12)",
+        "12.0"
+      ]
+    ]
+  },
+  "28": {
+    "text": "A grocery store had a total of 30 bottles of which 28 were bottles of regular soda and the rest were bottles of diet soda. How many bottles of diet soda did they have?",
+    "outputs": [
+      [
+        1,
+        "Calculator(30)",
+        "30.0"
+      ]
+    ]
+  },
+  "5": {
+    "text": "A grocery store had 81 bottles of regular soda, 60 bottles of diet soda and 60 bottles of lite soda. How many more bottles of regular soda did they have than diet soda?",
+    "outputs": [
+      [
+        1,
+        "Calculator(1)",
+        "1.0"
+      ]
+    ]
+  },
+  "13": {
+    "text": "Jack received a total of 9 emails in the day. If he received 7 emails in the morning and some more in the afternoon How many emails did Jack receive in the afternoon?",
+    "outputs": [
+      [
+        1,
+        "Calculator(9)",
+        "9.0"
+      ]
+    ]
+  },
+  "21": {
+    "text": "Dave had 59 files and 15 apps on his phone. After deleting some apps and files he had 12 apps and 30 files left. How many apps did he delete?",
+    "outputs": [
+      [
+        1,
+        "Calculator(12)",
+        "12.0"
+      ]
+    ]
+  },
+  "29": {
+    "text": "A grocery store had a total of 30 bottles of which 28 were bottles of regular soda and the rest were bottles of diet soda. How many bottles of diet soda did they have?",
+    "outputs": [
+      [
+        1,
+        "Calculator(30)",
+        "30.0"
+      ]
+    ]
+  },
+  "6": {
+    "text": "A grocery store had 81 bottles of regular soda, 60 bottles of diet soda and 60 bottles of lite soda. How many more bottles of regular soda did they have than diet soda?",
+    "outputs": [
+      [
+        1,
+        "Calculator(1)",
+        "1.0"
+      ]
+    ]
+  },
+  "14": {
+    "text": "Jack received a total of 9 emails in the day. If he received 7 emails in the morning and some more in the afternoon How many emails did Jack receive in the afternoon?",
+    "outputs": [
+      [
+        1,
+        "Calculator(9)",
+        "9.0"
+      ]
+    ]
+  },
+  "22": {
+    "text": "Dave had 59 files and 15 apps on his phone. After deleting some apps and files he had 12 apps and 30 files left. How many apps did he delete?",
+    "outputs": [
+      [
+        1,
+        "Calculator(12)",
+        "12.0"
+      ]
+    ]
+  },
+  "30": {
+    "text": "A grocery store had a total of 30 bottles of which 28 were bottles of regular soda and the rest were bottles of diet soda. How many bottles of diet soda did they have?",
+    "outputs": [
+      [
+        1,
+        "Calculator(30)",
+        "30.0"
+      ]
+    ]
+  },
+  "7": {
+    "text": "A grocery store had 81 bottles of regular soda, 60 bottles of diet soda and 60 bottles of lite soda. How many more bottles of regular soda did they have than diet soda?",
+    "outputs": [
+      [
+        1,
+        "Calculator(1)",
+        "1.0"
+      ]
+    ]
+  },
+  "15": {
+    "text": "Jack received a total of 9 emails in the day. If he received 7 emails in the morning and some more in the afternoon How many emails did Jack receive in the afternoon?",
+    "outputs": [
+      [
+        1,
+        "Calculator(9)",
+        "9.0"
+      ]
+    ]
+  },
+  "23": {
+    "text": "Dave had 59 files and 15 apps on his phone. After deleting some apps and files he had 12 apps and 30 files left. How many apps did he delete?",
+    "outputs": [
+      [
+        1,
+        "Calculator(12)",
+        "12.0"
+      ]
+    ]
+  },
+  "31": {
+    "text": "A grocery store had a total of 30 bottles of which 28 were bottles of regular soda and the rest were bottles of diet soda. How many bottles of diet soda did they have?",
+    "outputs": [
+      [
+        1,
+        "Calculator(30)",
+        "30.0"
+      ]
+    ]
+  }
+}

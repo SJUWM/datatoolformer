@@ -8,11 +8,11 @@ This is the implementation of the [Toolformer](https://arxiv.org/pdf/2302.04761.
 
 - Datasets:​  
 
-*c4 – A colossal, cleaned version of CommonCrawl’s web crawl corpus​  
+  - c4 – A colossal, cleaned version of CommonCrawl’s web crawl corpus​  
 
-*math_datset/arithmetic__add_or_sub_multiple – Math dataset with expressions​  
+  - math_datset/arithmetic__add_or_sub_multiple – Math dataset with expressions​  
 
-*ChilleD/SVAMP - Math dataset that has word problems​  
+  - ChilleD/SVAMP - Math dataset that has word problems​  
    
 **Architecture**  
 <img width="1267" alt="toolformer" src="https://github.com/SJUWM/datatoolformer/assets/117421227/f60bed83-cc96-4b25-bf5d-e87bf77fb506">   

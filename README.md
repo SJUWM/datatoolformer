@@ -1,8 +1,8 @@
 **Data Toolformer**  
-This is the implementation of the [Toolformer](https://arxiv.org/pdf/2302.04761.pdf) paper. We have used the following github repository as reference for our implementation [https://github.com/conceptofmind/toolformer](https://github.com/conceptofmind/toolformer).  
+This is the implementation of the [Toolformer](https://arxiv.org/pdf/2302.04761.pdf) paper. We have used the following github repository which partially implemets this paper as reference for our implementation [https://github.com/conceptofmind/toolformer](https://github.com/conceptofmind/toolformer).  
 **Architecture**  
 <img width="1267" alt="toolformer" src="https://github.com/SJUWM/datatoolformer/assets/117421227/f60bed83-cc96-4b25-bf5d-e87bf77fb506">  
-**Data Generation**
+**Data Generation**  
 Use the following command to generate the data  
 ```python data_generator.py --num_devices=x, --device_id=y```  
 **How to finetune the model**  
